@@ -21,7 +21,8 @@ driver.find_element_by_xpath("/html/body/main/div/div/div/div[2]/div[3]/div[2]/a
 
 time.sleep(3)
 
-driver.find_element_by_id("btnIPConfigNext").click()
+submit = driver.find_element_by_id("btnIPConfigNext").click()
+driver.execute_script("arguments[0].click();", submit)
 
 time.sleep(3)
 
@@ -36,7 +37,7 @@ drp = Select(element)
 
 time.sleep(2)
 
-drp.select_by_visible_text('Mayur')
+drp.select_by_visible_text('SeleniumPython')
 
 time.sleep(2)
 
